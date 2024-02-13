@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <title>Portfolio Round Icon</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+        :root {
+            --primary-color: #f9532d;
+            --primary-dark: #1F252E;
+        }
+
+        /*.images img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px #D1D9E6;
+        }*/
+        .images img {
+            border-radius: 10px; /* You can adjust the radius to your preference */
+            box-shadow: 0 0 10px #D1D9E6;
+        }
+        
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #1F252E;
+            height: 100vh;
+            color: #ffffff;
+        }
+
+        /* Genral */
+
+        .skills {
+            font-size: 40px;
+        }
+
+        .container {
+            padding: 0 8.4rem;
+        }
+
+        .img-w {
+            width: 100%;
+            border-radius: 30px;
+            height: auto;
+        }
+
+        .detail {
+            font-weight: 15px;
+            font-size: 64px Outfit;
+        }
+
+        /* Nav */
+        header {
+            background: var(--primary-dark);
+            position: relative;
+            box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            opacity: 0;
+            animation: leftSideAni 1s ease forwards;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        ul {
+            display: flex;
+            gap: .6rem;
+            list-style-type: none;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+        li a {
+            display: inline-block;
+            padding: .3rem 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            border-radius: 36px;
+            line-height: 2;
+            transition: .3s;
+            opacity: 0;
+            animation: navani .3s ease forwards;
+            animation-delay: calc(.15s * var(--navAni));
+        }
+
+        li a.active,
+        li a:hover {
+            color: var(--primary-color);
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .mode i {
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            opacity: 0;
+            animation: rightSideAni 1.5s ease forwards;
+        }
+
+        /* Nav End */
+
+        /* Section 1 */
+#picf{
+    border-radius: 20px;
+}
+        .main {
+            padding: 6rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+            row-gap: 2rem;
+            column-gap: 6rem;
+            align-items: center;
+        }
+
+        .main h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: topSideAni 1s ease forwards;
+        }
+
+        .main h1 {
+            color: #fff;
+            font-size: 4rem;
+            font-weight: 600;
+            opacity: 0;
+            animation: leftSideAni 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .main button {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.8rem 1rem;
+            font-size: 1.1rem;
+            border-radius: 7px;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+
+        .images {
+            margin-left: auto;
+            width: 300px;
+        }
+
+        .images img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px #D1D9E6;
+        }
+
+        /* Section 1 End */
+
+        /* about*/
+        #about {
+            padding: 6rem 0;
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .head2 {
+            color: var(--primary-color);
+            width: 370px;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            font-size: 48px;
+        }
+
+        #about div {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #about p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .detail {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    display: block;
+    margin: 0 auto; 
+}
+
+/* Style for the resume link inside the button */
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+        /* Roundin sec */
+
+        #About1 p {
+            font-size: 20px;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .big-circle {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border: 3px solid #bbbbbb;
+            border-radius: 50%;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            animation: Rotate 20s linear infinite;
+            -webkit-animation: Rotate 20s linear infinite;
+        }
+
+        .icon-block {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .icon-block img {
+            margin: 0px auto;
+            width: 60%;
+            animation: Rotate-reverse 20s linear infinite;
+            -webkit-animation: Rotate-reverse 20s linear infinite;
+        }
+
+        .icon-block:first-child {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .icon-block:nth-child(2) {
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            -webkit-transform: translate(50%, -50%);
+        }
+
+        .icon-block:nth-child(3) {
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            -webkit-transform: translate(-50%, 50%);
+        }
+
+        .icon-block:nth-child(4) {
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .rounding-sec {
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+
+        .images {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        /* keyframe animation */
+
+        @keyframes Rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes Rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes Rotate-reverse {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes Rotate-reverse {
+            from {
+                -webkit-transform: rotate(360deg);
+            }
+
+            to {
+                -webkit-transform: rotate(0deg);
+            }
+        }
+
+        /*contact*/
+
+
+        #Contact1 {
+            padding: 6rem 0;
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #Contact1 div {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #Contact1 p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .head4 {
+            color: #f9532d;
+            width: 370px;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            font-size: 48px;
+        }
+
+        /* Section for projects */
+
+        #projects {
+            padding: 6rem 0;
+            background-color: var(--primary-dark);
+            /* Change the background color */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .head4 {
+            color: #f9532d;
+            /* Change the text color */
+            width: 370px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            font-size: 48px;
+        }
+
+        #projects p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #projects a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #projects a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Animation */
+        @keyframes leftSideAni {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes navani {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes topSideAni {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                padding: 0 4.4rem;
+            }
+
+            .main h3 {
+                color: #000;
+                margin-top: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .main {
+                grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            }
+
+            .rounding-sec {
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 1.6rem;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            body {
+                height: auto;
+            }
+
+            header {
+                height: auto;
+                background-color: var(--primary-dark);
+            }
+
+            ul {
+                background: var(--primary-dark);
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                top: 3.4rem;
+                left: -100%;
+                z-index: 111111;
+            }
+
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--primary-color);
+            }
+
+            #click:checked~ul {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            .main {
+                grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+                margin-top: 2rem;
+                overflow-x: hidden;
+            }
+
+            .icon-block {
+                width: 50px;
+                height: 50px;
+            }
+
+            .rounding-sec {
+                height: 300px;
+                width: 300px;
+            }
+
+            .images {
+                width: 200px;
+            }
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#" onclick="showPage('home')"><img src="./png.png" height="50px" width="50px" alt="LOGO"></a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" onclick="showPage('home')" style="--navAni:1">Home</a></li>
+                <li><a href="#" onclick="showPage('About1')" style="--navAni:2">About</a></li>
+                <li><a href="#" onclick="showPage('projrcts1')" style="--navAni:3">Projects</a></li>
+                <li><a href="#" onclick="showPage('Contact1')" style="--navAni:3">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="home" class="page active">
+        <section class="container">
+            <section class="container">
+                <div class="main">
+                    <!-- <div class="rounding-sec">
+                        <div class="images">
+                            <img src="./Kiran Pic.jpg" alt="" class="img-w">
+                        </div>
+                    </div> -->
+                    <div class="">
+                        <img src="./ProfilePic.jpg" alt="Profile pic" class="img-w">
+
+                    </div>
+                    <div class="detail">
+                        <h3>Hi, I'm</h3>
+                        <h1><span style="color:#f9532d;">Kiran</span> Mouli</h1>
+                        <p style="color:#ffffff ;">I'm a professional Web Developer. My Main Goal to help & Satisfied the Local & Global Clients
+                            by web development solutions</p>
+                        <button type="button " onclick="showPage('Contact1')">Contact </button>
+                        <a href="https://github.com/DEEPTHIGANGIREDDY" class="fa-brands fa-github"><i></i></a>
+                        <a href="" class="fa-brands fa-twitter"><i></i></a>
+                        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                            class="fa-brands fa-linkedin"><i></i></a></td>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <div id="About1" class="page">
+        <section id="about">
+            <h1 class="head2" style="color: aliceblue;width: 370px;padding: 5px;border-radius: 10px;">
+                About Me</h1>
+            <div>
+                <p>Hello, I'm Kiran Mouli, a passionate front-end developer based in Hyderabad.</p>
+                <p>As a recent graduate with a degree in Mechanical Engineering, I am enthusiastic about creating an
+                    user-friendly web experiences. I specialize in transforming design concepts into responsive and
+                    interactive websites using modern web technologies.</p>
+                <h1 style="color:#f9532d;" class="skills"> Skills </h1>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>Responsive Web Design</li>
+                    <li>Front-end Frameworks (e.g., React)</li>
+                    <li>Version Control (e.g.,GitHub)</li>
+                    <li>Web Accessibility and SEO best practices</li>
+                </ul>
+                <p>I am constantly learning and staying up-to-date with the latest trends and technologies in the
+                    fast-paced field of front-end development. I am passionate about creating visually appealing and
+                    intuitive user interfaces that leave a lasting impression.</p>
+                <p>Feel free to explore my portfolio to see some of the projects I've worked on. If you have any
+                    questions or if you'd like to collaborate, don't hesitate to reach out.</p>
+            </div>
+        </section>
+        <button><a href="./Kiran's Resume.pdf" download="KiranMouliResume.pdf" class="resume-link">
+                Download Resume
+            </a></button>
+    </div>
+
+
+    <div id="Contact1" class="page">
+        <section id="Contact">
+            <h1 class="head4"
+                style="color: rgb(234, 97, 11);width: 370px;text-align: center;padding: 5px;border-radius: 10px;">
+                Contact</h1>
+            <p>Linked In : <a href="https://linkedin.com/in/kiran-mouli-orugundla"
+                    style="color: #ffffff;">linkedin.com/in/kiran-mouli-orugundla
+                </a></p>
+            <p>Email : <a href="mailto:moulikiran5944@gmail.com" style="color: #ffffff;">moulikiran5944@gmail.com</a>
+            </p>
+        </section>
+    </div>
+    <div id="projrcts1" class="page">
+        <section id="projects">
+            <h1 class="head4"
+                style="color: rgb(234, 97, 11);width: 370px;text-align: center;padding: 5px;border-radius: 10px;">
+                Projects</h1>
+            <p><a href="">E-Prathiba Educational</a></p>
+            <p><a href="">Expense tracker</a></p>
+            <p><a href="">Random Thought Generator</a></p>
+            <p><a href="">Currency Converter</a></p>
+            <p><a href="">verifying the prime numbers</a></p>
+            <p><a href="">Finding The Lcm Of Two Numbers</a></p>
+            <p><a href="">Responsive Pages</a></p>
+
+        </section>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Show the selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
